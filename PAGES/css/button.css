@@ -1,0 +1,44 @@
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 6px 12px;
+  gap: 4px;
+  height: 32px;
+  width: 40px;
+  border: none;
+  background: #34AF6D;
+  border-radius:20px;
+  cursor: pointer;
+  margin-top: -3px;
+  margin-left: 9px;
+}
+
+.button:hover {
+  background: #fff;
+}
+
+.button:hover .svg-icon {
+  animation: rotate 1.3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

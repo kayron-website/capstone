@@ -1,0 +1,36 @@
+ul.links a[href="calendar_admin.php"] li {
+    background-color: rgba(140, 195, 220, 1);
+    color: #000;
+    border-radius: 0 35px 35px 0;
+}
+.fc-unthemed td.fc-today {
+    background: #d0f0c0;
+}
+.fc-view-container *, .fc-view-container :after, .fc-view-container :before {
+    box-sizing: content-box;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+.fc-day-header {
+    background-color: #c5e0b3;
+}
+.fc-day {
+    background-color: #ffffff;
+}
+.fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-list-heading td, .fc-unthemed .fc-list-view, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
+    border-color: #61876E;
+}
+.fc-toolbar.fc-header-toolbar {
+    margin-bottom: -10px;
+    background-color: #496039;
+    color: white;
+    height: 50px;
+}
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+    float: right;
+    color: black;
+}
+.hide-input {
+    display: none;
+}
+  

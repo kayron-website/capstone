@@ -1,0 +1,167 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#calendar-container {
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Set the maximum width of the calendar */
+  width: 100%;
+  overflow: hidden;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#calendar .day {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 40px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  position: relative;
+  font-size: 12px; /* Adjust font size if needed */
+  display: flex;
+  flex-direction: column;
+}
+
+#calendar .day::before {
+  content: attr(data-day); /* Use the data-day attribute as the content */
+  margin-top: 5px;
+  margin-right: 5px; /* Adjust the right margin as needed */
+  align-self: flex-end; /* Align to the top right corner */
+  font-size: 12px; /* Adjust font size if needed */
+}
+
+#calendar .day:hover {
+  background-color: #eee;
+}
+
+#calendar .day.inactive {
+  color: #aaa;
+}
+
+#calendar .day.today {
+  background-color: #ffd700;
+  font-weight: bold;
+}
+
+#calendar .day:not(.inactive):not(.today) {
+  transition: background-color 0.3s;
+}
+
+#calendar .day:not(.inactive):not(.today):hover {
+  background-color: #f0f0f0;
+}
+
+#navigation {
+  background-color: #333; /* Darker background color */
+  color: #fff; /* White text color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#prev-month,
+#next-month {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.day {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.previous:hover {
+background-color: #ffffff;
+color: black;
+}
+
+.next:hover {
+background-color: #ffffff;
+color: black;
+}
+
+.previous {
+background-color: #000;
+color: white;
+text-decoration: none;
+display: inline-block;
+padding: 8px 16px;
+}
+
+.next {
+background-color: #000;
+color: white;
+text-decoration: none;
+display: inline-block;
+padding: 8px 16px;
+}
+
+.event {
+  margin-top: 5px;
+  padding: 5px 8px; /* Adjust padding */
+  background-color: #4CAF50;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#event-title {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
